@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script src="https://openseadragon.github.io/openseadragon/openseadragon.min.js"></script>
+    </head>
+    <body>
+        <div id="iiif-demo" style="background-color: #000000"></div>
+        <script type="text/javascript">
+            OpenSeadragon({
+            id:                 "iiif-demo",
+            prefixUrl:          "https://openseadragon.github.io/openseadragon/images/",
+            preserveViewport:   true,
+            sequenceMode:  true,
+            tileSources:   [
+                "<REPLACE_SERVER_IP:PORT>/iiif/2/im1.tif/info.json",
+                "<REPLACE_SERVER_IP:PORT>/iiif/2/im2.tif/info.json",
+				"<REPLACE_SERVER_IP:PORT>/iiif/2/im3.tif/info.json"
+            ]}
+            );
+        </script>
+    </body>
+</html>

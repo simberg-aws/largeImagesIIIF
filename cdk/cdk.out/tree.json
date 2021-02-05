@@ -1,0 +1,1977 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "LargeImagesCdkStack": {
+        "id": "LargeImagesCdkStack",
+        "path": "LargeImagesCdkStack",
+        "children": {
+          "MyVpc": {
+            "id": "MyVpc",
+            "path": "LargeImagesCdkStack/MyVpc",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "LargeImagesCdkStack/MyVpc/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
+                  "aws:cdk:cloudformation:props": {
+                    "cidrBlock": "10.0.0.0/16",
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "instanceTenancy": "default",
+                    "tags": [
+                      {
+                        "key": "billing-group",
+                        "value": "iiif"
+                      },
+                      {
+                        "key": "Name",
+                        "value": "LargeImagesCdkStack/MyVpc"
+                      }
+                    ]
+                  }
+                }
+              },
+              "PublicSubnet1": {
+                "id": "PublicSubnet1",
+                "path": "LargeImagesCdkStack/MyVpc/PublicSubnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.0.0/18",
+                        "vpcId": {
+                          "Ref": "MyVpcF9F0CA6F"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            0,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "LargeImagesCdkStack/MyVpc/PublicSubnet1"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet1/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "MyVpcF9F0CA6F"
+                        },
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "LargeImagesCdkStack/MyVpc/PublicSubnet1"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "MyVpcPublicSubnet1RouteTableC46AB2F4"
+                        },
+                        "subnetId": {
+                          "Ref": "MyVpcPublicSubnet1SubnetF6608456"
+                        }
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet1/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "MyVpcPublicSubnet1RouteTableC46AB2F4"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "MyVpcIGW5C4A4F63"
+                        }
+                      }
+                    }
+                  },
+                  "EIP": {
+                    "id": "EIP",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet1/EIP",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::EIP",
+                      "aws:cdk:cloudformation:props": {
+                        "domain": "vpc",
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "LargeImagesCdkStack/MyVpc/PublicSubnet1"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "NATGateway": {
+                    "id": "NATGateway",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet1/NATGateway",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::NatGateway",
+                      "aws:cdk:cloudformation:props": {
+                        "allocationId": {
+                          "Fn::GetAtt": [
+                            "MyVpcPublicSubnet1EIP096967CB",
+                            "AllocationId"
+                          ]
+                        },
+                        "subnetId": {
+                          "Ref": "MyVpcPublicSubnet1SubnetF6608456"
+                        },
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "LargeImagesCdkStack/MyVpc/PublicSubnet1"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "PublicSubnet2": {
+                "id": "PublicSubnet2",
+                "path": "LargeImagesCdkStack/MyVpc/PublicSubnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.64.0/18",
+                        "vpcId": {
+                          "Ref": "MyVpcF9F0CA6F"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            1,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "LargeImagesCdkStack/MyVpc/PublicSubnet2"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet2/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "MyVpcF9F0CA6F"
+                        },
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "LargeImagesCdkStack/MyVpc/PublicSubnet2"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "MyVpcPublicSubnet2RouteTable1DF17386"
+                        },
+                        "subnetId": {
+                          "Ref": "MyVpcPublicSubnet2Subnet492B6BFB"
+                        }
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet2/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "MyVpcPublicSubnet2RouteTable1DF17386"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "MyVpcIGW5C4A4F63"
+                        }
+                      }
+                    }
+                  },
+                  "EIP": {
+                    "id": "EIP",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet2/EIP",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::EIP",
+                      "aws:cdk:cloudformation:props": {
+                        "domain": "vpc",
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "LargeImagesCdkStack/MyVpc/PublicSubnet2"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "NATGateway": {
+                    "id": "NATGateway",
+                    "path": "LargeImagesCdkStack/MyVpc/PublicSubnet2/NATGateway",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::NatGateway",
+                      "aws:cdk:cloudformation:props": {
+                        "allocationId": {
+                          "Fn::GetAtt": [
+                            "MyVpcPublicSubnet2EIP8CCBA239",
+                            "AllocationId"
+                          ]
+                        },
+                        "subnetId": {
+                          "Ref": "MyVpcPublicSubnet2Subnet492B6BFB"
+                        },
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "LargeImagesCdkStack/MyVpc/PublicSubnet2"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "PrivateSubnet1": {
+                "id": "PrivateSubnet1",
+                "path": "LargeImagesCdkStack/MyVpc/PrivateSubnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "LargeImagesCdkStack/MyVpc/PrivateSubnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.128.0/18",
+                        "vpcId": {
+                          "Ref": "MyVpcF9F0CA6F"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            0,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": false,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "LargeImagesCdkStack/MyVpc/PrivateSubnet1"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "LargeImagesCdkStack/MyVpc/PrivateSubnet1/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "LargeImagesCdkStack/MyVpc/PrivateSubnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "MyVpcF9F0CA6F"
+                        },
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "LargeImagesCdkStack/MyVpc/PrivateSubnet1"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "LargeImagesCdkStack/MyVpc/PrivateSubnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "MyVpcPrivateSubnet1RouteTable8819E6E2"
+                        },
+                        "subnetId": {
+                          "Ref": "MyVpcPrivateSubnet1Subnet5057CF7E"
+                        }
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "LargeImagesCdkStack/MyVpc/PrivateSubnet1/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "MyVpcPrivateSubnet1RouteTable8819E6E2"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "natGatewayId": {
+                          "Ref": "MyVpcPublicSubnet1NATGatewayAD3400C1"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "PrivateSubnet2": {
+                "id": "PrivateSubnet2",
+                "path": "LargeImagesCdkStack/MyVpc/PrivateSubnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "LargeImagesCdkStack/MyVpc/PrivateSubnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.192.0/18",
+                        "vpcId": {
+                          "Ref": "MyVpcF9F0CA6F"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            1,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": false,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "LargeImagesCdkStack/MyVpc/PrivateSubnet2"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "LargeImagesCdkStack/MyVpc/PrivateSubnet2/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "LargeImagesCdkStack/MyVpc/PrivateSubnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "MyVpcF9F0CA6F"
+                        },
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "LargeImagesCdkStack/MyVpc/PrivateSubnet2"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "LargeImagesCdkStack/MyVpc/PrivateSubnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "MyVpcPrivateSubnet2RouteTableCEDCEECE"
+                        },
+                        "subnetId": {
+                          "Ref": "MyVpcPrivateSubnet2Subnet0040C983"
+                        }
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "LargeImagesCdkStack/MyVpc/PrivateSubnet2/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "MyVpcPrivateSubnet2RouteTableCEDCEECE"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "natGatewayId": {
+                          "Ref": "MyVpcPublicSubnet2NATGateway91BFBEC9"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "IGW": {
+                "id": "IGW",
+                "path": "LargeImagesCdkStack/MyVpc/IGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::InternetGateway",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "billing-group",
+                        "value": "iiif"
+                      },
+                      {
+                        "key": "Name",
+                        "value": "LargeImagesCdkStack/MyVpc"
+                      }
+                    ]
+                  }
+                }
+              },
+              "VPCGW": {
+                "id": "VPCGW",
+                "path": "LargeImagesCdkStack/MyVpc/VPCGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPCGatewayAttachment",
+                  "aws:cdk:cloudformation:props": {
+                    "vpcId": {
+                      "Ref": "MyVpcF9F0CA6F"
+                    },
+                    "internetGatewayId": {
+                      "Ref": "MyVpcIGW5C4A4F63"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "MyCluster": {
+            "id": "MyCluster",
+            "path": "LargeImagesCdkStack/MyCluster",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "LargeImagesCdkStack/MyCluster/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::Cluster",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "billing-group",
+                        "value": "iiif"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "iiifUser": {
+            "id": "iiifUser",
+            "path": "LargeImagesCdkStack/iiifUser",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "LargeImagesCdkStack/iiifUser/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::User",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "billing-group",
+                        "value": "iiif"
+                      }
+                    ]
+                  }
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "LargeImagesCdkStack/iiifUser/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "LargeImagesCdkStack/iiifUser/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "s3:GetObject*",
+                                "s3:GetBucket*",
+                                "s3:List*"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": [
+                                {
+                                  "Fn::GetAtt": [
+                                    "imageSourceBucket74199BD4",
+                                    "Arn"
+                                  ]
+                                },
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      {
+                                        "Fn::GetAtt": [
+                                          "imageSourceBucket74199BD4",
+                                          "Arn"
+                                        ]
+                                      },
+                                      "/*"
+                                    ]
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Action": [
+                                "s3:GetObject*",
+                                "s3:GetBucket*",
+                                "s3:List*",
+                                "s3:DeleteObject*",
+                                "s3:PutObject",
+                                "s3:Abort*"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": [
+                                {
+                                  "Fn::GetAtt": [
+                                    "imageCacheBucket21A3B9FE",
+                                    "Arn"
+                                  ]
+                                },
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      {
+                                        "Fn::GetAtt": [
+                                          "imageCacheBucket21A3B9FE",
+                                          "Arn"
+                                        ]
+                                      },
+                                      "/*"
+                                    ]
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "iiifUserDefaultPolicy0F9000F2",
+                        "users": [
+                          {
+                            "Ref": "iiifUser12FF31B8"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "iiifUserAccessKey": {
+            "id": "iiifUserAccessKey",
+            "path": "LargeImagesCdkStack/iiifUserAccessKey",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::IAM::AccessKey",
+              "aws:cdk:cloudformation:props": {
+                "userName": {
+                  "Ref": "iiifUser12FF31B8"
+                }
+              }
+            }
+          },
+          "imageSourceBucket": {
+            "id": "imageSourceBucket",
+            "path": "LargeImagesCdkStack/imageSourceBucket",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "LargeImagesCdkStack/imageSourceBucket/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "publicAccessBlockConfiguration": {
+                      "blockPublicAcls": true,
+                      "blockPublicPolicy": true,
+                      "ignorePublicAcls": true,
+                      "restrictPublicBuckets": true
+                    },
+                    "tags": [
+                      {
+                        "key": "billing-group",
+                        "value": "iiif"
+                      }
+                    ]
+                  }
+                }
+              },
+              "Notifications": {
+                "id": "Notifications",
+                "path": "LargeImagesCdkStack/imageSourceBucket/Notifications",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "LargeImagesCdkStack/imageSourceBucket/Notifications/Resource"
+                  }
+                }
+              },
+              "AllowBucketNotificationsToLargeImagesCdkStackiiifImgPreprocessF61DF809": {
+                "id": "AllowBucketNotificationsToLargeImagesCdkStackiiifImgPreprocessF61DF809",
+                "path": "LargeImagesCdkStack/imageSourceBucket/AllowBucketNotificationsToLargeImagesCdkStackiiifImgPreprocessF61DF809",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                  "aws:cdk:cloudformation:props": {
+                    "action": "lambda:InvokeFunction",
+                    "functionName": {
+                      "Fn::GetAtt": [
+                        "iiifImgPreprocess5F90758A",
+                        "Arn"
+                      ]
+                    },
+                    "principal": "s3.amazonaws.com",
+                    "sourceAccount": {
+                      "Ref": "AWS::AccountId"
+                    },
+                    "sourceArn": {
+                      "Fn::GetAtt": [
+                        "imageSourceBucket74199BD4",
+                        "Arn"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "imageCacheBucket": {
+            "id": "imageCacheBucket",
+            "path": "LargeImagesCdkStack/imageCacheBucket",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "LargeImagesCdkStack/imageCacheBucket/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "publicAccessBlockConfiguration": {
+                      "blockPublicAcls": true,
+                      "blockPublicPolicy": true,
+                      "ignorePublicAcls": true,
+                      "restrictPublicBuckets": true
+                    },
+                    "tags": [
+                      {
+                        "key": "billing-group",
+                        "value": "iiif"
+                      }
+                    ]
+                  }
+                }
+              },
+              "Notifications": {
+                "id": "Notifications",
+                "path": "LargeImagesCdkStack/imageCacheBucket/Notifications"
+              }
+            }
+          },
+          "MyFargateService": {
+            "id": "MyFargateService",
+            "path": "LargeImagesCdkStack/MyFargateService",
+            "children": {
+              "LB": {
+                "id": "LB",
+                "path": "LargeImagesCdkStack/MyFargateService/LB",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "LargeImagesCdkStack/MyFargateService/LB/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+                      "aws:cdk:cloudformation:props": {
+                        "loadBalancerAttributes": [
+                          {
+                            "key": "deletion_protection.enabled",
+                            "value": "false"
+                          }
+                        ],
+                        "scheme": "internet-facing",
+                        "securityGroups": [
+                          {
+                            "Fn::GetAtt": [
+                              "MyFargateServiceLBSecurityGroup6FBF16F1",
+                              "GroupId"
+                            ]
+                          }
+                        ],
+                        "subnets": [
+                          {
+                            "Ref": "MyVpcPublicSubnet1SubnetF6608456"
+                          },
+                          {
+                            "Ref": "MyVpcPublicSubnet2Subnet492B6BFB"
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          }
+                        ],
+                        "type": "application"
+                      }
+                    }
+                  },
+                  "SecurityGroup": {
+                    "id": "SecurityGroup",
+                    "path": "LargeImagesCdkStack/MyFargateService/LB/SecurityGroup",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "LargeImagesCdkStack/MyFargateService/LB/SecurityGroup/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                          "aws:cdk:cloudformation:props": {
+                            "groupDescription": "Automatically created Security Group for ELB LargeImagesCdkStackMyFargateServiceLB2BB08221",
+                            "securityGroupIngress": [
+                              {
+                                "cidrIp": "0.0.0.0/0",
+                                "ipProtocol": "tcp",
+                                "fromPort": 8182,
+                                "toPort": 8182,
+                                "description": "Allow from anyone on port 8182"
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "billing-group",
+                                "value": "iiif"
+                              }
+                            ],
+                            "vpcId": {
+                              "Ref": "MyVpcF9F0CA6F"
+                            }
+                          }
+                        }
+                      },
+                      "to LargeImagesCdkStackMyFargateServiceSecurityGroup09B7D729:8182": {
+                        "id": "to LargeImagesCdkStackMyFargateServiceSecurityGroup09B7D729:8182",
+                        "path": "LargeImagesCdkStack/MyFargateService/LB/SecurityGroup/to LargeImagesCdkStackMyFargateServiceSecurityGroup09B7D729:8182",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupEgress",
+                          "aws:cdk:cloudformation:props": {
+                            "groupId": {
+                              "Fn::GetAtt": [
+                                "MyFargateServiceLBSecurityGroup6FBF16F1",
+                                "GroupId"
+                              ]
+                            },
+                            "ipProtocol": "tcp",
+                            "description": "Load balancer to target",
+                            "destinationSecurityGroupId": {
+                              "Fn::GetAtt": [
+                                "MyFargateServiceSecurityGroup7016792A",
+                                "GroupId"
+                              ]
+                            },
+                            "fromPort": 8182,
+                            "toPort": 8182
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "PublicListener": {
+                    "id": "PublicListener",
+                    "path": "LargeImagesCdkStack/MyFargateService/LB/PublicListener",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "LargeImagesCdkStack/MyFargateService/LB/PublicListener/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::Listener",
+                          "aws:cdk:cloudformation:props": {
+                            "defaultActions": [
+                              {
+                                "type": "forward",
+                                "targetGroupArn": {
+                                  "Ref": "MyFargateServiceLBPublicListenerECSGroup4A3EDF05"
+                                }
+                              }
+                            ],
+                            "loadBalancerArn": {
+                              "Ref": "MyFargateServiceLBDE830E97"
+                            },
+                            "port": 8182,
+                            "protocol": "HTTP"
+                          }
+                        }
+                      },
+                      "ECSGroup": {
+                        "id": "ECSGroup",
+                        "path": "LargeImagesCdkStack/MyFargateService/LB/PublicListener/ECSGroup",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "LargeImagesCdkStack/MyFargateService/LB/PublicListener/ECSGroup/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+                              "aws:cdk:cloudformation:props": {
+                                "port": 80,
+                                "protocol": "HTTP",
+                                "tags": [
+                                  {
+                                    "key": "billing-group",
+                                    "value": "iiif"
+                                  }
+                                ],
+                                "targetType": "ip",
+                                "vpcId": {
+                                  "Ref": "MyVpcF9F0CA6F"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "LoadBalancerDNS": {
+                "id": "LoadBalancerDNS",
+                "path": "LargeImagesCdkStack/MyFargateService/LoadBalancerDNS"
+              },
+              "ServiceURL": {
+                "id": "ServiceURL",
+                "path": "LargeImagesCdkStack/MyFargateService/ServiceURL"
+              },
+              "TaskDef": {
+                "id": "TaskDef",
+                "path": "LargeImagesCdkStack/MyFargateService/TaskDef",
+                "children": {
+                  "TaskRole": {
+                    "id": "TaskRole",
+                    "path": "LargeImagesCdkStack/MyFargateService/TaskDef/TaskRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "LargeImagesCdkStack/MyFargateService/TaskDef/TaskRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "ecs-tasks.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "tags": [
+                              {
+                                "key": "billing-group",
+                                "value": "iiif"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "LargeImagesCdkStack/MyFargateService/TaskDef/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ECS::TaskDefinition",
+                      "aws:cdk:cloudformation:props": {
+                        "containerDefinitions": [
+                          {
+                            "essential": true,
+                            "image": "public.ecr.aws/f4r5b0m7/iiif-aws-solution-poc",
+                            "name": "web",
+                            "portMappings": [
+                              {
+                                "containerPort": 8182,
+                                "protocol": "tcp"
+                              }
+                            ],
+                            "logConfiguration": {
+                              "logDriver": "awslogs",
+                              "options": {
+                                "awslogs-group": {
+                                  "Ref": "MyFargateServiceTaskDefwebLogGroup4A6C44E8"
+                                },
+                                "awslogs-stream-prefix": "MyFargateService",
+                                "awslogs-region": {
+                                  "Ref": "AWS::Region"
+                                }
+                              }
+                            },
+                            "environment": [
+                              {
+                                "name": "S3SOURCE_ACCESS_KEY_ID",
+                                "value": {
+                                  "Ref": "iiifUserAccessKey"
+                                }
+                              },
+                              {
+                                "name": "S3SOURCE_SECRET_KEY",
+                                "value": {
+                                  "Fn::GetAtt": [
+                                    "iiifUserAccessKey",
+                                    "SecretAccessKey"
+                                  ]
+                                }
+                              },
+                              {
+                                "name": "S3SOURCE_ENDPOINT",
+                                "value": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "https://s3.",
+                                      {
+                                        "Ref": "AWS::Region"
+                                      },
+                                      ".amazonaws.com"
+                                    ]
+                                  ]
+                                }
+                              },
+                              {
+                                "name": "S3SOURCE_BASICLOOKUPSTRATEGY_BUCKET_NAME",
+                                "value": {
+                                  "Ref": "imageSourceBucket74199BD4"
+                                }
+                              },
+                              {
+                                "name": "S3CACHE_ACCESS_KEY_ID",
+                                "value": {
+                                  "Ref": "iiifUserAccessKey"
+                                }
+                              },
+                              {
+                                "name": "S3CACHE_SECRET_KEY",
+                                "value": {
+                                  "Fn::GetAtt": [
+                                    "iiifUserAccessKey",
+                                    "SecretAccessKey"
+                                  ]
+                                }
+                              },
+                              {
+                                "name": "S3CACHE_ENDPOINT",
+                                "value": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "https://s3.",
+                                      {
+                                        "Ref": "AWS::Region"
+                                      },
+                                      ".amazonaws.com"
+                                    ]
+                                  ]
+                                }
+                              },
+                              {
+                                "name": "S3CACHE_BUCKET_NAME",
+                                "value": {
+                                  "Ref": "imageCacheBucket21A3B9FE"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "cpu": "2048",
+                        "executionRoleArn": {
+                          "Fn::GetAtt": [
+                            "MyFargateServiceTaskDefExecutionRoleD6305504",
+                            "Arn"
+                          ]
+                        },
+                        "family": "LargeImagesCdkStackMyFargateServiceTaskDefAA728F05",
+                        "memory": "4096",
+                        "networkMode": "awsvpc",
+                        "requiresCompatibilities": [
+                          "FARGATE"
+                        ],
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          }
+                        ],
+                        "taskRoleArn": {
+                          "Fn::GetAtt": [
+                            "MyFargateServiceTaskDefTaskRole62C7D397",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "web": {
+                    "id": "web",
+                    "path": "LargeImagesCdkStack/MyFargateService/TaskDef/web",
+                    "children": {
+                      "LogGroup": {
+                        "id": "LogGroup",
+                        "path": "LargeImagesCdkStack/MyFargateService/TaskDef/web/LogGroup",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "LargeImagesCdkStack/MyFargateService/TaskDef/web/LogGroup/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Logs::LogGroup",
+                              "aws:cdk:cloudformation:props": {}
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "ExecutionRole": {
+                    "id": "ExecutionRole",
+                    "path": "LargeImagesCdkStack/MyFargateService/TaskDef/ExecutionRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "LargeImagesCdkStack/MyFargateService/TaskDef/ExecutionRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "ecs-tasks.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "tags": [
+                              {
+                                "key": "billing-group",
+                                "value": "iiif"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "LargeImagesCdkStack/MyFargateService/TaskDef/ExecutionRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "LargeImagesCdkStack/MyFargateService/TaskDef/ExecutionRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": [
+                                        "logs:CreateLogStream",
+                                        "logs:PutLogEvents"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::GetAtt": [
+                                          "MyFargateServiceTaskDefwebLogGroup4A6C44E8",
+                                          "Arn"
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "MyFargateServiceTaskDefExecutionRoleDefaultPolicyEC22B20F",
+                                "roles": [
+                                  {
+                                    "Ref": "MyFargateServiceTaskDefExecutionRoleD6305504"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Service": {
+                "id": "Service",
+                "path": "LargeImagesCdkStack/MyFargateService/Service",
+                "children": {
+                  "Service": {
+                    "id": "Service",
+                    "path": "LargeImagesCdkStack/MyFargateService/Service/Service",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ECS::Service",
+                      "aws:cdk:cloudformation:props": {
+                        "cluster": {
+                          "Ref": "MyCluster4C1BA579"
+                        },
+                        "deploymentConfiguration": {
+                          "maximumPercent": 200,
+                          "minimumHealthyPercent": 50
+                        },
+                        "desiredCount": 3,
+                        "enableEcsManagedTags": false,
+                        "healthCheckGracePeriodSeconds": 60,
+                        "launchType": "FARGATE",
+                        "loadBalancers": [
+                          {
+                            "targetGroupArn": {
+                              "Ref": "MyFargateServiceLBPublicListenerECSGroup4A3EDF05"
+                            },
+                            "containerName": "web",
+                            "containerPort": 8182
+                          }
+                        ],
+                        "networkConfiguration": {
+                          "awsvpcConfiguration": {
+                            "assignPublicIp": "DISABLED",
+                            "subnets": [
+                              {
+                                "Ref": "MyVpcPrivateSubnet1Subnet5057CF7E"
+                              },
+                              {
+                                "Ref": "MyVpcPrivateSubnet2Subnet0040C983"
+                              }
+                            ],
+                            "securityGroups": [
+                              {
+                                "Fn::GetAtt": [
+                                  "MyFargateServiceSecurityGroup7016792A",
+                                  "GroupId"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          }
+                        ],
+                        "taskDefinition": {
+                          "Ref": "MyFargateServiceTaskDef5DA17B39"
+                        }
+                      }
+                    }
+                  },
+                  "SecurityGroup": {
+                    "id": "SecurityGroup",
+                    "path": "LargeImagesCdkStack/MyFargateService/Service/SecurityGroup",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "LargeImagesCdkStack/MyFargateService/Service/SecurityGroup/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                          "aws:cdk:cloudformation:props": {
+                            "groupDescription": "LargeImagesCdkStack/MyFargateService/Service/SecurityGroup",
+                            "securityGroupEgress": [
+                              {
+                                "cidrIp": "0.0.0.0/0",
+                                "description": "Allow all outbound traffic by default",
+                                "ipProtocol": "-1"
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "billing-group",
+                                "value": "iiif"
+                              }
+                            ],
+                            "vpcId": {
+                              "Ref": "MyVpcF9F0CA6F"
+                            }
+                          }
+                        }
+                      },
+                      "from LargeImagesCdkStackMyFargateServiceLBSecurityGroup1290001C:8182": {
+                        "id": "from LargeImagesCdkStackMyFargateServiceLBSecurityGroup1290001C:8182",
+                        "path": "LargeImagesCdkStack/MyFargateService/Service/SecurityGroup/from LargeImagesCdkStackMyFargateServiceLBSecurityGroup1290001C:8182",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                          "aws:cdk:cloudformation:props": {
+                            "ipProtocol": "tcp",
+                            "description": "Load balancer to target",
+                            "fromPort": 8182,
+                            "groupId": {
+                              "Fn::GetAtt": [
+                                "MyFargateServiceSecurityGroup7016792A",
+                                "GroupId"
+                              ]
+                            },
+                            "sourceSecurityGroupId": {
+                              "Fn::GetAtt": [
+                                "MyFargateServiceLBSecurityGroup6FBF16F1",
+                                "GroupId"
+                              ]
+                            },
+                            "toPort": 8182
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "iiifImgPreprocessQueue": {
+            "id": "iiifImgPreprocessQueue",
+            "path": "LargeImagesCdkStack/iiifImgPreprocessQueue",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "LargeImagesCdkStack/iiifImgPreprocessQueue/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SQS::Queue",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "billing-group",
+                        "value": "iiif"
+                      }
+                    ],
+                    "visibilityTimeout": 900
+                  }
+                }
+              }
+            }
+          },
+          "iiifImgPreprocess": {
+            "id": "iiifImgPreprocess",
+            "path": "LargeImagesCdkStack/iiifImgPreprocess",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "LargeImagesCdkStack/iiifImgPreprocess/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "LargeImagesCdkStack/iiifImgPreprocess/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "LargeImagesCdkStack/iiifImgPreprocess/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "LargeImagesCdkStack/iiifImgPreprocess/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "sqs:SendMessage",
+                                    "sqs:GetQueueAttributes",
+                                    "sqs:GetQueueUrl"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Fn::GetAtt": [
+                                      "iiifImgPreprocessQueue514CD772",
+                                      "Arn"
+                                    ]
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "iiifImgPreprocessServiceRoleDefaultPolicy4CCF9BEA",
+                            "roles": [
+                              {
+                                "Ref": "iiifImgPreprocessServiceRoleFF6C4ED0"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "LargeImagesCdkStack/iiifImgPreprocess/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "LargeImagesCdkStack/iiifImgPreprocess/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "LargeImagesCdkStack/iiifImgPreprocess/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "LargeImagesCdkStack/iiifImgPreprocess/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adS3Bucket400830AD"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adS3VersionKey5461B2A0"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adS3VersionKey5461B2A0"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "iiifImgPreprocessServiceRoleFF6C4ED0",
+                        "Arn"
+                      ]
+                    },
+                    "environment": {
+                      "variables": {
+                        "QUEUE_NAME": {
+                          "Ref": "iiifImgPreprocessQueue514CD772"
+                        },
+                        "IIIF_ENDPOINT": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "http://",
+                              {
+                                "Fn::GetAtt": [
+                                  "MyFargateServiceLBDE830E97",
+                                  "DNSName"
+                                ]
+                              },
+                              ":8182"
+                            ]
+                          ]
+                        }
+                      }
+                    },
+                    "handler": "iiifImgPreprocess.handler",
+                    "runtime": "nodejs12.x",
+                    "tags": [
+                      {
+                        "key": "billing-group",
+                        "value": "iiif"
+                      }
+                    ],
+                    "timeout": 90
+                  }
+                }
+              }
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "LargeImagesCdkStack/AssetParameters",
+            "children": {
+              "bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad": {
+                "id": "bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad",
+                "path": "LargeImagesCdkStack/AssetParameters/bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "LargeImagesCdkStack/AssetParameters/bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "LargeImagesCdkStack/AssetParameters/bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "LargeImagesCdkStack/AssetParameters/bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad/ArtifactHash"
+                  }
+                }
+              },
+              "dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6": {
+                "id": "dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6",
+                "path": "LargeImagesCdkStack/AssetParameters/dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "LargeImagesCdkStack/AssetParameters/dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "LargeImagesCdkStack/AssetParameters/dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "LargeImagesCdkStack/AssetParameters/dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6/ArtifactHash"
+                  }
+                }
+              }
+            }
+          },
+          "iiifImgProcess": {
+            "id": "iiifImgProcess",
+            "path": "LargeImagesCdkStack/iiifImgProcess",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "LargeImagesCdkStack/iiifImgProcess/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "LargeImagesCdkStack/iiifImgProcess/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "LargeImagesCdkStack/iiifImgProcess/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "LargeImagesCdkStack/iiifImgProcess/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "sqs:ReceiveMessage",
+                                    "sqs:ChangeMessageVisibility",
+                                    "sqs:GetQueueUrl",
+                                    "sqs:DeleteMessage",
+                                    "sqs:GetQueueAttributes"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Fn::GetAtt": [
+                                      "iiifImgPreprocessQueue514CD772",
+                                      "Arn"
+                                    ]
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "iiifImgProcessServiceRoleDefaultPolicy64B1B449",
+                            "roles": [
+                              {
+                                "Ref": "iiifImgProcessServiceRole748F2EEF"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "LargeImagesCdkStack/iiifImgProcess/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "LargeImagesCdkStack/iiifImgProcess/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "LargeImagesCdkStack/iiifImgProcess/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "LargeImagesCdkStack/iiifImgProcess/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6S3Bucket8E0931D4"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6S3VersionKey8F7A456B"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6S3VersionKey8F7A456B"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "iiifImgProcessServiceRole748F2EEF",
+                        "Arn"
+                      ]
+                    },
+                    "environment": {
+                      "variables": {
+                        "QUEUE_NAME": {
+                          "Ref": "iiifImgPreprocessQueue514CD772"
+                        },
+                        "IIIF_ENDPOINT": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "http://",
+                              {
+                                "Fn::GetAtt": [
+                                  "MyFargateServiceLBDE830E97",
+                                  "DNSName"
+                                ]
+                              },
+                              ":8182"
+                            ]
+                          ]
+                        }
+                      }
+                    },
+                    "handler": "iiifImgProcessor.handler",
+                    "runtime": "nodejs12.x",
+                    "tags": [
+                      {
+                        "key": "billing-group",
+                        "value": "iiif"
+                      }
+                    ],
+                    "timeout": 90
+                  }
+                }
+              },
+              "SqsEventSource:LargeImagesCdkStackiiifImgPreprocessQueue3648EBF9": {
+                "id": "SqsEventSource:LargeImagesCdkStackiiifImgPreprocessQueue3648EBF9",
+                "path": "LargeImagesCdkStack/iiifImgProcess/SqsEventSource:LargeImagesCdkStackiiifImgPreprocessQueue3648EBF9",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "LargeImagesCdkStack/iiifImgProcess/SqsEventSource:LargeImagesCdkStackiiifImgPreprocessQueue3648EBF9/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::EventSourceMapping",
+                      "aws:cdk:cloudformation:props": {
+                        "functionName": {
+                          "Ref": "iiifImgProcessA8A9C76E"
+                        },
+                        "batchSize": 4,
+                        "eventSourceArn": {
+                          "Fn::GetAtt": [
+                            "iiifImgPreprocessQueue514CD772",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "BucketNotificationsHandler050a0587b7544547bf325f094a3db834": {
+            "id": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834",
+            "path": "LargeImagesCdkStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834",
+            "children": {
+              "Role": {
+                "id": "Role",
+                "path": "LargeImagesCdkStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "LargeImagesCdkStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "billing-group",
+                            "value": "iiif"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "LargeImagesCdkStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "LargeImagesCdkStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "s3:PutBucketNotification",
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36",
+                            "roles": [
+                              {
+                                "Ref": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "LargeImagesCdkStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource"
+              }
+            }
+          },
+          "Region": {
+            "id": "Region",
+            "path": "LargeImagesCdkStack/Region"
+          },
+          "IIIF Username": {
+            "id": "IIIF Username",
+            "path": "LargeImagesCdkStack/IIIF Username"
+          },
+          "Image Source Bucket": {
+            "id": "Image Source Bucket",
+            "path": "LargeImagesCdkStack/Image Source Bucket"
+          },
+          "ELB URL": {
+            "id": "ELB URL",
+            "path": "LargeImagesCdkStack/ELB URL"
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "LargeImagesCdkStack/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "LargeImagesCdkStack/CDKMetadata/Default"
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "LargeImagesCdkStack/CDKMetadata/Condition"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1928 @@
+{
+  "Resources": {
+    "MyVpcF9F0CA6F": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/16",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/Resource"
+      }
+    },
+    "MyVpcPublicSubnet1SubnetF6608456": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/18",
+        "VpcId": {
+          "Ref": "MyVpcF9F0CA6F"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PublicSubnet1/Subnet"
+      }
+    },
+    "MyVpcPublicSubnet1RouteTableC46AB2F4": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MyVpcF9F0CA6F"
+        },
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PublicSubnet1/RouteTable"
+      }
+    },
+    "MyVpcPublicSubnet1RouteTableAssociation2ECEE1CB": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyVpcPublicSubnet1RouteTableC46AB2F4"
+        },
+        "SubnetId": {
+          "Ref": "MyVpcPublicSubnet1SubnetF6608456"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PublicSubnet1/RouteTableAssociation"
+      }
+    },
+    "MyVpcPublicSubnet1DefaultRoute95FDF9EB": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyVpcPublicSubnet1RouteTableC46AB2F4"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "MyVpcIGW5C4A4F63"
+        }
+      },
+      "DependsOn": [
+        "MyVpcVPCGW488ACE0D"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PublicSubnet1/DefaultRoute"
+      }
+    },
+    "MyVpcPublicSubnet1EIP096967CB": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PublicSubnet1/EIP"
+      }
+    },
+    "MyVpcPublicSubnet1NATGatewayAD3400C1": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "MyVpcPublicSubnet1EIP096967CB",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "MyVpcPublicSubnet1SubnetF6608456"
+        },
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PublicSubnet1/NATGateway"
+      }
+    },
+    "MyVpcPublicSubnet2Subnet492B6BFB": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.64.0/18",
+        "VpcId": {
+          "Ref": "MyVpcF9F0CA6F"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PublicSubnet2/Subnet"
+      }
+    },
+    "MyVpcPublicSubnet2RouteTable1DF17386": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MyVpcF9F0CA6F"
+        },
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PublicSubnet2/RouteTable"
+      }
+    },
+    "MyVpcPublicSubnet2RouteTableAssociation227DE78D": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyVpcPublicSubnet2RouteTable1DF17386"
+        },
+        "SubnetId": {
+          "Ref": "MyVpcPublicSubnet2Subnet492B6BFB"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PublicSubnet2/RouteTableAssociation"
+      }
+    },
+    "MyVpcPublicSubnet2DefaultRoute052936F6": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyVpcPublicSubnet2RouteTable1DF17386"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "MyVpcIGW5C4A4F63"
+        }
+      },
+      "DependsOn": [
+        "MyVpcVPCGW488ACE0D"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PublicSubnet2/DefaultRoute"
+      }
+    },
+    "MyVpcPublicSubnet2EIP8CCBA239": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PublicSubnet2/EIP"
+      }
+    },
+    "MyVpcPublicSubnet2NATGateway91BFBEC9": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "MyVpcPublicSubnet2EIP8CCBA239",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "MyVpcPublicSubnet2Subnet492B6BFB"
+        },
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PublicSubnet2/NATGateway"
+      }
+    },
+    "MyVpcPrivateSubnet1Subnet5057CF7E": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.128.0/18",
+        "VpcId": {
+          "Ref": "MyVpcF9F0CA6F"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          },
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc/PrivateSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PrivateSubnet1/Subnet"
+      }
+    },
+    "MyVpcPrivateSubnet1RouteTable8819E6E2": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MyVpcF9F0CA6F"
+        },
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc/PrivateSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PrivateSubnet1/RouteTable"
+      }
+    },
+    "MyVpcPrivateSubnet1RouteTableAssociation56D38C7E": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyVpcPrivateSubnet1RouteTable8819E6E2"
+        },
+        "SubnetId": {
+          "Ref": "MyVpcPrivateSubnet1Subnet5057CF7E"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PrivateSubnet1/RouteTableAssociation"
+      }
+    },
+    "MyVpcPrivateSubnet1DefaultRouteA8CDE2FA": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyVpcPrivateSubnet1RouteTable8819E6E2"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "MyVpcPublicSubnet1NATGatewayAD3400C1"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PrivateSubnet1/DefaultRoute"
+      }
+    },
+    "MyVpcPrivateSubnet2Subnet0040C983": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.192.0/18",
+        "VpcId": {
+          "Ref": "MyVpcF9F0CA6F"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          },
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc/PrivateSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PrivateSubnet2/Subnet"
+      }
+    },
+    "MyVpcPrivateSubnet2RouteTableCEDCEECE": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MyVpcF9F0CA6F"
+        },
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc/PrivateSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PrivateSubnet2/RouteTable"
+      }
+    },
+    "MyVpcPrivateSubnet2RouteTableAssociation86A610DA": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyVpcPrivateSubnet2RouteTableCEDCEECE"
+        },
+        "SubnetId": {
+          "Ref": "MyVpcPrivateSubnet2Subnet0040C983"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PrivateSubnet2/RouteTableAssociation"
+      }
+    },
+    "MyVpcPrivateSubnet2DefaultRoute9CE96294": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyVpcPrivateSubnet2RouteTableCEDCEECE"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "MyVpcPublicSubnet2NATGateway91BFBEC9"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/PrivateSubnet2/DefaultRoute"
+      }
+    },
+    "MyVpcIGW5C4A4F63": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          },
+          {
+            "Key": "Name",
+            "Value": "LargeImagesCdkStack/MyVpc"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/IGW"
+      }
+    },
+    "MyVpcVPCGW488ACE0D": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MyVpcF9F0CA6F"
+        },
+        "InternetGatewayId": {
+          "Ref": "MyVpcIGW5C4A4F63"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyVpc/VPCGW"
+      }
+    },
+    "MyCluster4C1BA579": {
+      "Type": "AWS::ECS::Cluster",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyCluster/Resource"
+      }
+    },
+    "iiifUser12FF31B8": {
+      "Type": "AWS::IAM::User",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/iiifUser/Resource"
+      }
+    },
+    "iiifUserDefaultPolicy0F9000F2": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "imageSourceBucket74199BD4",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "imageSourceBucket74199BD4",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+                "s3:PutObject",
+                "s3:Abort*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "imageCacheBucket21A3B9FE",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "imageCacheBucket21A3B9FE",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "iiifUserDefaultPolicy0F9000F2",
+        "Users": [
+          {
+            "Ref": "iiifUser12FF31B8"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/iiifUser/DefaultPolicy/Resource"
+      }
+    },
+    "iiifUserAccessKey": {
+      "Type": "AWS::IAM::AccessKey",
+      "Properties": {
+        "UserName": {
+          "Ref": "iiifUser12FF31B8"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/iiifUserAccessKey"
+      }
+    },
+    "imageSourceBucket74199BD4": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "BlockPublicPolicy": true,
+          "IgnorePublicAcls": true,
+          "RestrictPublicBuckets": true
+        },
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ]
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/imageSourceBucket/Resource"
+      }
+    },
+    "imageSourceBucketNotifications7CB33940": {
+      "Type": "Custom::S3BucketNotifications",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691",
+            "Arn"
+          ]
+        },
+        "BucketName": {
+          "Ref": "imageSourceBucket74199BD4"
+        },
+        "NotificationConfiguration": {
+          "LambdaFunctionConfigurations": [
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "LambdaFunctionArn": {
+                "Fn::GetAtt": [
+                  "iiifImgPreprocess5F90758A",
+                  "Arn"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "DependsOn": [
+        "imageSourceBucketAllowBucketNotificationsToLargeImagesCdkStackiiifImgPreprocessF61DF809694C08EA"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/imageSourceBucket/Notifications/Resource"
+      }
+    },
+    "imageSourceBucketAllowBucketNotificationsToLargeImagesCdkStackiiifImgPreprocessF61DF809694C08EA": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "iiifImgPreprocess5F90758A",
+            "Arn"
+          ]
+        },
+        "Principal": "s3.amazonaws.com",
+        "SourceAccount": {
+          "Ref": "AWS::AccountId"
+        },
+        "SourceArn": {
+          "Fn::GetAtt": [
+            "imageSourceBucket74199BD4",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/imageSourceBucket/AllowBucketNotificationsToLargeImagesCdkStackiiifImgPreprocessF61DF809"
+      }
+    },
+    "imageCacheBucket21A3B9FE": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "BlockPublicPolicy": true,
+          "IgnorePublicAcls": true,
+          "RestrictPublicBuckets": true
+        },
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ]
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/imageCacheBucket/Resource"
+      }
+    },
+    "MyFargateServiceLBDE830E97": {
+      "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "Properties": {
+        "LoadBalancerAttributes": [
+          {
+            "Key": "deletion_protection.enabled",
+            "Value": "false"
+          }
+        ],
+        "Scheme": "internet-facing",
+        "SecurityGroups": [
+          {
+            "Fn::GetAtt": [
+              "MyFargateServiceLBSecurityGroup6FBF16F1",
+              "GroupId"
+            ]
+          }
+        ],
+        "Subnets": [
+          {
+            "Ref": "MyVpcPublicSubnet1SubnetF6608456"
+          },
+          {
+            "Ref": "MyVpcPublicSubnet2Subnet492B6BFB"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ],
+        "Type": "application"
+      },
+      "DependsOn": [
+        "MyVpcPublicSubnet1DefaultRoute95FDF9EB",
+        "MyVpcPublicSubnet2DefaultRoute052936F6"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyFargateService/LB/Resource"
+      }
+    },
+    "MyFargateServiceLBSecurityGroup6FBF16F1": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Automatically created Security Group for ELB LargeImagesCdkStackMyFargateServiceLB2BB08221",
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow from anyone on port 8182",
+            "FromPort": 8182,
+            "IpProtocol": "tcp",
+            "ToPort": 8182
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ],
+        "VpcId": {
+          "Ref": "MyVpcF9F0CA6F"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyFargateService/LB/SecurityGroup/Resource"
+      }
+    },
+    "MyFargateServiceLBSecurityGrouptoLargeImagesCdkStackMyFargateServiceSecurityGroup09B7D729818237D7E2B2": {
+      "Type": "AWS::EC2::SecurityGroupEgress",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "MyFargateServiceLBSecurityGroup6FBF16F1",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "Description": "Load balancer to target",
+        "DestinationSecurityGroupId": {
+          "Fn::GetAtt": [
+            "MyFargateServiceSecurityGroup7016792A",
+            "GroupId"
+          ]
+        },
+        "FromPort": 8182,
+        "ToPort": 8182
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyFargateService/LB/SecurityGroup/to LargeImagesCdkStackMyFargateServiceSecurityGroup09B7D729:8182"
+      }
+    },
+    "MyFargateServiceLBPublicListener61A1042F": {
+      "Type": "AWS::ElasticLoadBalancingV2::Listener",
+      "Properties": {
+        "DefaultActions": [
+          {
+            "TargetGroupArn": {
+              "Ref": "MyFargateServiceLBPublicListenerECSGroup4A3EDF05"
+            },
+            "Type": "forward"
+          }
+        ],
+        "LoadBalancerArn": {
+          "Ref": "MyFargateServiceLBDE830E97"
+        },
+        "Port": 8182,
+        "Protocol": "HTTP"
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyFargateService/LB/PublicListener/Resource"
+      }
+    },
+    "MyFargateServiceLBPublicListenerECSGroup4A3EDF05": {
+      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties": {
+        "Port": 80,
+        "Protocol": "HTTP",
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ],
+        "TargetType": "ip",
+        "VpcId": {
+          "Ref": "MyVpcF9F0CA6F"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyFargateService/LB/PublicListener/ECSGroup/Resource"
+      }
+    },
+    "MyFargateServiceTaskDefTaskRole62C7D397": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyFargateService/TaskDef/TaskRole/Resource"
+      }
+    },
+    "MyFargateServiceTaskDef5DA17B39": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "ContainerDefinitions": [
+          {
+            "Environment": [
+              {
+                "Name": "S3SOURCE_ACCESS_KEY_ID",
+                "Value": {
+                  "Ref": "iiifUserAccessKey"
+                }
+              },
+              {
+                "Name": "S3SOURCE_SECRET_KEY",
+                "Value": {
+                  "Fn::GetAtt": [
+                    "iiifUserAccessKey",
+                    "SecretAccessKey"
+                  ]
+                }
+              },
+              {
+                "Name": "S3SOURCE_ENDPOINT",
+                "Value": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "https://s3.",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ".amazonaws.com"
+                    ]
+                  ]
+                }
+              },
+              {
+                "Name": "S3SOURCE_BASICLOOKUPSTRATEGY_BUCKET_NAME",
+                "Value": {
+                  "Ref": "imageSourceBucket74199BD4"
+                }
+              },
+              {
+                "Name": "S3CACHE_ACCESS_KEY_ID",
+                "Value": {
+                  "Ref": "iiifUserAccessKey"
+                }
+              },
+              {
+                "Name": "S3CACHE_SECRET_KEY",
+                "Value": {
+                  "Fn::GetAtt": [
+                    "iiifUserAccessKey",
+                    "SecretAccessKey"
+                  ]
+                }
+              },
+              {
+                "Name": "S3CACHE_ENDPOINT",
+                "Value": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "https://s3.",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ".amazonaws.com"
+                    ]
+                  ]
+                }
+              },
+              {
+                "Name": "S3CACHE_BUCKET_NAME",
+                "Value": {
+                  "Ref": "imageCacheBucket21A3B9FE"
+                }
+              }
+            ],
+            "Essential": true,
+            "Image": "public.ecr.aws/f4r5b0m7/iiif-aws-solution-poc",
+            "LogConfiguration": {
+              "LogDriver": "awslogs",
+              "Options": {
+                "awslogs-group": {
+                  "Ref": "MyFargateServiceTaskDefwebLogGroup4A6C44E8"
+                },
+                "awslogs-stream-prefix": "MyFargateService",
+                "awslogs-region": {
+                  "Ref": "AWS::Region"
+                }
+              }
+            },
+            "Name": "web",
+            "PortMappings": [
+              {
+                "ContainerPort": 8182,
+                "Protocol": "tcp"
+              }
+            ]
+          }
+        ],
+        "Cpu": "2048",
+        "ExecutionRoleArn": {
+          "Fn::GetAtt": [
+            "MyFargateServiceTaskDefExecutionRoleD6305504",
+            "Arn"
+          ]
+        },
+        "Family": "LargeImagesCdkStackMyFargateServiceTaskDefAA728F05",
+        "Memory": "4096",
+        "NetworkMode": "awsvpc",
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ],
+        "TaskRoleArn": {
+          "Fn::GetAtt": [
+            "MyFargateServiceTaskDefTaskRole62C7D397",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyFargateService/TaskDef/Resource"
+      }
+    },
+    "MyFargateServiceTaskDefwebLogGroup4A6C44E8": {
+      "Type": "AWS::Logs::LogGroup",
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyFargateService/TaskDef/web/LogGroup/Resource"
+      }
+    },
+    "MyFargateServiceTaskDefExecutionRoleD6305504": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyFargateService/TaskDef/ExecutionRole/Resource"
+      }
+    },
+    "MyFargateServiceTaskDefExecutionRoleDefaultPolicyEC22B20F": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "MyFargateServiceTaskDefwebLogGroup4A6C44E8",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "MyFargateServiceTaskDefExecutionRoleDefaultPolicyEC22B20F",
+        "Roles": [
+          {
+            "Ref": "MyFargateServiceTaskDefExecutionRoleD6305504"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyFargateService/TaskDef/ExecutionRole/DefaultPolicy/Resource"
+      }
+    },
+    "MyFargateServiceF490C034": {
+      "Type": "AWS::ECS::Service",
+      "Properties": {
+        "Cluster": {
+          "Ref": "MyCluster4C1BA579"
+        },
+        "DeploymentConfiguration": {
+          "MaximumPercent": 200,
+          "MinimumHealthyPercent": 50
+        },
+        "DesiredCount": 3,
+        "EnableECSManagedTags": false,
+        "HealthCheckGracePeriodSeconds": 60,
+        "LaunchType": "FARGATE",
+        "LoadBalancers": [
+          {
+            "ContainerName": "web",
+            "ContainerPort": 8182,
+            "TargetGroupArn": {
+              "Ref": "MyFargateServiceLBPublicListenerECSGroup4A3EDF05"
+            }
+          }
+        ],
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "AssignPublicIp": "DISABLED",
+            "SecurityGroups": [
+              {
+                "Fn::GetAtt": [
+                  "MyFargateServiceSecurityGroup7016792A",
+                  "GroupId"
+                ]
+              }
+            ],
+            "Subnets": [
+              {
+                "Ref": "MyVpcPrivateSubnet1Subnet5057CF7E"
+              },
+              {
+                "Ref": "MyVpcPrivateSubnet2Subnet0040C983"
+              }
+            ]
+          }
+        },
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ],
+        "TaskDefinition": {
+          "Ref": "MyFargateServiceTaskDef5DA17B39"
+        }
+      },
+      "DependsOn": [
+        "MyFargateServiceLBPublicListenerECSGroup4A3EDF05",
+        "MyFargateServiceLBPublicListener61A1042F"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyFargateService/Service/Service"
+      }
+    },
+    "MyFargateServiceSecurityGroup7016792A": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "LargeImagesCdkStack/MyFargateService/Service/SecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ],
+        "VpcId": {
+          "Ref": "MyVpcF9F0CA6F"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyFargateService/Service/SecurityGroup/Resource"
+      }
+    },
+    "MyFargateServiceSecurityGroupfromLargeImagesCdkStackMyFargateServiceLBSecurityGroup1290001C818247FACDDE": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "Properties": {
+        "IpProtocol": "tcp",
+        "Description": "Load balancer to target",
+        "FromPort": 8182,
+        "GroupId": {
+          "Fn::GetAtt": [
+            "MyFargateServiceSecurityGroup7016792A",
+            "GroupId"
+          ]
+        },
+        "SourceSecurityGroupId": {
+          "Fn::GetAtt": [
+            "MyFargateServiceLBSecurityGroup6FBF16F1",
+            "GroupId"
+          ]
+        },
+        "ToPort": 8182
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/MyFargateService/Service/SecurityGroup/from LargeImagesCdkStackMyFargateServiceLBSecurityGroup1290001C:8182"
+      }
+    },
+    "iiifImgPreprocessQueue514CD772": {
+      "Type": "AWS::SQS::Queue",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ],
+        "VisibilityTimeout": 900
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/iiifImgPreprocessQueue/Resource"
+      }
+    },
+    "iiifImgPreprocessServiceRoleFF6C4ED0": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/iiifImgPreprocess/ServiceRole/Resource"
+      }
+    },
+    "iiifImgPreprocessServiceRoleDefaultPolicy4CCF9BEA": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "sqs:SendMessage",
+                "sqs:GetQueueAttributes",
+                "sqs:GetQueueUrl"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "iiifImgPreprocessQueue514CD772",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "iiifImgPreprocessServiceRoleDefaultPolicy4CCF9BEA",
+        "Roles": [
+          {
+            "Ref": "iiifImgPreprocessServiceRoleFF6C4ED0"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/iiifImgPreprocess/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "iiifImgPreprocess5F90758A": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adS3Bucket400830AD"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adS3VersionKey5461B2A0"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adS3VersionKey5461B2A0"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "iiifImgPreprocessServiceRoleFF6C4ED0",
+            "Arn"
+          ]
+        },
+        "Environment": {
+          "Variables": {
+            "QUEUE_NAME": {
+              "Ref": "iiifImgPreprocessQueue514CD772"
+            },
+            "IIIF_ENDPOINT": {
+              "Fn::Join": [
+                "",
+                [
+                  "http://",
+                  {
+                    "Fn::GetAtt": [
+                      "MyFargateServiceLBDE830E97",
+                      "DNSName"
+                    ]
+                  },
+                  ":8182"
+                ]
+              ]
+            }
+          }
+        },
+        "Handler": "iiifImgPreprocess.handler",
+        "Runtime": "nodejs12.x",
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ],
+        "Timeout": 90
+      },
+      "DependsOn": [
+        "iiifImgPreprocessServiceRoleDefaultPolicy4CCF9BEA",
+        "iiifImgPreprocessServiceRoleFF6C4ED0"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/iiifImgPreprocess/Resource",
+        "aws:asset:path": "asset.bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad",
+        "aws:asset:property": "Code"
+      }
+    },
+    "iiifImgProcessServiceRole748F2EEF": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/iiifImgProcess/ServiceRole/Resource"
+      }
+    },
+    "iiifImgProcessServiceRoleDefaultPolicy64B1B449": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "sqs:ReceiveMessage",
+                "sqs:ChangeMessageVisibility",
+                "sqs:GetQueueUrl",
+                "sqs:DeleteMessage",
+                "sqs:GetQueueAttributes"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "iiifImgPreprocessQueue514CD772",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "iiifImgProcessServiceRoleDefaultPolicy64B1B449",
+        "Roles": [
+          {
+            "Ref": "iiifImgProcessServiceRole748F2EEF"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/iiifImgProcess/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "iiifImgProcessA8A9C76E": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6S3Bucket8E0931D4"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6S3VersionKey8F7A456B"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6S3VersionKey8F7A456B"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "iiifImgProcessServiceRole748F2EEF",
+            "Arn"
+          ]
+        },
+        "Environment": {
+          "Variables": {
+            "QUEUE_NAME": {
+              "Ref": "iiifImgPreprocessQueue514CD772"
+            },
+            "IIIF_ENDPOINT": {
+              "Fn::Join": [
+                "",
+                [
+                  "http://",
+                  {
+                    "Fn::GetAtt": [
+                      "MyFargateServiceLBDE830E97",
+                      "DNSName"
+                    ]
+                  },
+                  ":8182"
+                ]
+              ]
+            }
+          }
+        },
+        "Handler": "iiifImgProcessor.handler",
+        "Runtime": "nodejs12.x",
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ],
+        "Timeout": 90
+      },
+      "DependsOn": [
+        "iiifImgProcessServiceRoleDefaultPolicy64B1B449",
+        "iiifImgProcessServiceRole748F2EEF"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/iiifImgProcess/Resource",
+        "aws:asset:path": "asset.dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6",
+        "aws:asset:property": "Code"
+      }
+    },
+    "iiifImgProcessSqsEventSourceLargeImagesCdkStackiiifImgPreprocessQueue3648EBF94461B473": {
+      "Type": "AWS::Lambda::EventSourceMapping",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "iiifImgProcessA8A9C76E"
+        },
+        "BatchSize": 4,
+        "EventSourceArn": {
+          "Fn::GetAtt": [
+            "iiifImgPreprocessQueue514CD772",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/iiifImgProcess/SqsEventSource:LargeImagesCdkStackiiifImgPreprocessQueue3648EBF9/Resource"
+      }
+    },
+    "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource"
+      }
+    },
+    "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:PutBucketNotification",
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36",
+        "Roles": [
+          {
+            "Ref": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource"
+      }
+    },
+    "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Description": "AWS CloudFormation handler for \"Custom::S3BucketNotifications\" resources (@aws-cdk/aws-s3)",
+        "Code": {
+          "ZipFile": "exports.handler = (event, context) => {\n    // eslint-disable-next-line @typescript-eslint/no-require-imports, import/no-extraneous-dependencies\n    const s3 = new (require('aws-sdk').S3)();\n    // eslint-disable-next-line @typescript-eslint/no-require-imports\n    const https = require('https');\n    // eslint-disable-next-line @typescript-eslint/no-require-imports\n    const url = require('url');\n    log(JSON.stringify(event, undefined, 2));\n    const props = event.ResourceProperties;\n    if (event.RequestType === 'Delete') {\n        props.NotificationConfiguration = {}; // this is how you clean out notifications\n    }\n    const req = {\n        Bucket: props.BucketName,\n        NotificationConfiguration: props.NotificationConfiguration,\n    };\n    return s3.putBucketNotificationConfiguration(req, (err, data) => {\n        log({ err, data });\n        if (err) {\n            return submitResponse('FAILED', err.message + `\\nMore information in CloudWatch Log Stream: ${context.logStreamName}`);\n        }\n        else {\n            return submitResponse('SUCCESS');\n        }\n    });\n    function log(obj) {\n        console.error(event.RequestId, event.StackId, event.LogicalResourceId, obj);\n    }\n    // eslint-disable-next-line max-len\n    // adapted from https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-cfnresponsemodule\n    // to allow sending an error messge as a reason.\n    function submitResponse(responseStatus, reason) {\n        const responseBody = JSON.stringify({\n            Status: responseStatus,\n            Reason: reason || 'See the details in CloudWatch Log Stream: ' + context.logStreamName,\n            PhysicalResourceId: event.PhysicalResourceId || event.LogicalResourceId,\n            StackId: event.StackId,\n            RequestId: event.RequestId,\n            LogicalResourceId: event.LogicalResourceId,\n            NoEcho: false,\n        });\n        log({ responseBody });\n        const parsedUrl = url.parse(event.ResponseURL);\n        const options = {\n            hostname: parsedUrl.hostname,\n            port: 443,\n            path: parsedUrl.path,\n            method: 'PUT',\n            headers: {\n                'content-type': '',\n                'content-length': responseBody.length,\n            },\n        };\n        const request = https.request(options, (r) => {\n            log({ statusCode: r.statusCode, statusMessage: r.statusMessage });\n            context.done();\n        });\n        request.on('error', (error) => {\n            log({ sendError: error });\n            context.done();\n        });\n        request.write(responseBody);\n        request.end();\n    }\n};"
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x",
+        "Timeout": 300,
+        "Tags": [
+          {
+            "Key": "billing-group",
+            "Value": "iiif"
+          }
+        ]
+      },
+      "DependsOn": [
+        "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36",
+        "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Modules": "aws-cdk=1.88.0,@aws-cdk/assets=1.88.0,@aws-cdk/aws-apigateway=1.88.0,@aws-cdk/aws-applicationautoscaling=1.88.0,@aws-cdk/aws-autoscaling=1.88.0,@aws-cdk/aws-autoscaling-common=1.88.0,@aws-cdk/aws-autoscaling-hooktargets=1.88.0,@aws-cdk/aws-certificatemanager=1.88.0,@aws-cdk/aws-cloudwatch=1.88.0,@aws-cdk/aws-codeguruprofiler=1.88.0,@aws-cdk/aws-ec2=1.88.0,@aws-cdk/aws-ecr=1.88.0,@aws-cdk/aws-ecr-assets=1.88.0,@aws-cdk/aws-ecs=1.88.0,@aws-cdk/aws-ecs-patterns=1.88.0,@aws-cdk/aws-elasticloadbalancingv2=1.88.0,@aws-cdk/aws-events=1.88.0,@aws-cdk/aws-events-targets=1.88.0,@aws-cdk/aws-iam=1.88.0,@aws-cdk/aws-kms=1.88.0,@aws-cdk/aws-lambda=1.88.0,@aws-cdk/aws-lambda-event-sources=1.88.0,@aws-cdk/aws-logs=1.88.0,@aws-cdk/aws-route53=1.88.0,@aws-cdk/aws-route53-targets=1.88.0,@aws-cdk/aws-s3=1.88.0,@aws-cdk/aws-s3-assets=1.88.0,@aws-cdk/aws-s3-notifications=1.88.0,@aws-cdk/aws-servicediscovery=1.88.0,@aws-cdk/aws-sns=1.88.0,@aws-cdk/aws-sns-subscriptions=1.88.0,@aws-cdk/aws-sqs=1.88.0,@aws-cdk/aws-ssm=1.88.0,@aws-cdk/cloud-assembly-schema=1.88.0,@aws-cdk/core=1.88.0,@aws-cdk/custom-resources=1.88.0,@aws-cdk/cx-api=1.88.0,@aws-cdk/region-info=1.88.0,jsii-runtime=node.js/v14.15.1"
+      },
+      "Metadata": {
+        "aws:cdk:path": "LargeImagesCdkStack/CDKMetadata/Default"
+      },
+      "Condition": "CDKMetadataAvailable"
+    }
+  },
+  "Outputs": {
+    "MyFargateServiceLoadBalancerDNS704F6391": {
+      "Value": {
+        "Fn::GetAtt": [
+          "MyFargateServiceLBDE830E97",
+          "DNSName"
+        ]
+      }
+    },
+    "MyFargateServiceServiceURL4CF8398A": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "http://",
+            {
+              "Fn::GetAtt": [
+                "MyFargateServiceLBDE830E97",
+                "DNSName"
+              ]
+            }
+          ]
+        ]
+      }
+    },
+    "Region": {
+      "Value": {
+        "Ref": "AWS::Region"
+      }
+    },
+    "IIIFUsername": {
+      "Value": {
+        "Ref": "iiifUser12FF31B8"
+      }
+    },
+    "ImageSourceBucket": {
+      "Value": {
+        "Ref": "imageSourceBucket74199BD4"
+      }
+    },
+    "ELBURL": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "http://",
+            {
+              "Fn::GetAtt": [
+                "MyFargateServiceLBDE830E97",
+                "DNSName"
+              ]
+            },
+            ":8182"
+          ]
+        ]
+      }
+    }
+  },
+  "Parameters": {
+    "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adS3Bucket400830AD": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad\""
+    },
+    "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adS3VersionKey5461B2A0": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad\""
+    },
+    "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adArtifactHash847A8C77": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad\""
+    },
+    "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6S3Bucket8E0931D4": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6\""
+    },
+    "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6S3VersionKey8F7A456B": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6\""
+    },
+    "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6ArtifactHash9E4BF738": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6\""
+    }
+  },
+  "Conditions": {
+    "CDKMetadataAvailable": {
+      "Fn::Or": [
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ca-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-northwest-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-central-1"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-3"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "me-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "sa-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

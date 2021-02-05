@@ -1,0 +1,2169 @@
+{
+  "version": "9.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "LargeImagesCdkStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "LargeImagesCdkStack.template.json",
+        "tags": {
+          "billing-group": "iiif"
+        }
+      },
+      "metadata": {
+        "/LargeImagesCdkStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad",
+              "id": "bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad",
+              "packaging": "zip",
+              "sourceHash": "bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad",
+              "s3BucketParameter": "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adS3Bucket400830AD",
+              "s3KeyParameter": "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adS3VersionKey5461B2A0",
+              "artifactHashParameter": "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adArtifactHash847A8C77"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "LargeImagesCdkStack.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:90:37)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6",
+              "id": "dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6",
+              "packaging": "zip",
+              "sourceHash": "dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6",
+              "s3BucketParameter": "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6S3Bucket8E0931D4",
+              "s3KeyParameter": "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6S3VersionKey8F7A456B",
+              "artifactHashParameter": "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6ArtifactHash9E4BF738"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "LargeImagesCdkStack.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:101:34)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "billing-group",
+                "Value": "iiif"
+              }
+            ],
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.ts:431:92)",
+              "Object.addStackArtifactToAssembly (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\_shared.ts:25:16)",
+              "LegacyStackSynthesizer.emitStackArtifact (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\stack-synthesizer.ts:57:5)",
+              "LegacyStackSynthesizer.synthesize (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:109:10)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:157:29",
+              "visit (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:200:5)",
+              "visit (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:196:5)",
+              "synthesizeTree (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:150:3)",
+              "Object.synthesize (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:39:3)",
+              "App.synth (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stage.ts:188:23)",
+              "process.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:486:12)",
+              "process.emit (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\source-map-support\\source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcF9F0CA6F",
+            "trace": [
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1199:21)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPublicSubnet1SubnetF6608456",
+            "trace": [
+              "new Subnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1533:20)",
+              "new PublicSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1748:5)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:28)",
+              "Vpc.createSubnets (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1356:12)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1228:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPublicSubnet1RouteTableC46AB2F4",
+            "trace": [
+              "new Subnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1551:19)",
+              "new PublicSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1748:5)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:28)",
+              "Vpc.createSubnets (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1356:12)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1228:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPublicSubnet1RouteTableAssociation2ECEE1CB",
+            "trace": [
+              "new Subnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1557:5)",
+              "new PublicSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1748:5)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:28)",
+              "Vpc.createSubnets (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1356:12)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1228:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPublicSubnet1DefaultRoute95FDF9EB",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1573:19)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1247:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1246:46)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPublicSubnet1EIP096967CB",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1760:21)",
+              "NatGatewayProvider.configureNat (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:173:27)",
+              "Vpc.createNatGateways (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1331:14)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1253:14)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPublicSubnet1NATGatewayAD3400C1",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1758:17)",
+              "NatGatewayProvider.configureNat (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:173:27)",
+              "Vpc.createNatGateways (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1331:14)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1253:14)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPublicSubnet2Subnet492B6BFB",
+            "trace": [
+              "new Subnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1533:20)",
+              "new PublicSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1748:5)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:28)",
+              "Vpc.createSubnets (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1356:12)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1228:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPublicSubnet2RouteTable1DF17386",
+            "trace": [
+              "new Subnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1551:19)",
+              "new PublicSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1748:5)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:28)",
+              "Vpc.createSubnets (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1356:12)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1228:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPublicSubnet2RouteTableAssociation227DE78D",
+            "trace": [
+              "new Subnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1557:5)",
+              "new PublicSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1748:5)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:28)",
+              "Vpc.createSubnets (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1356:12)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1228:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPublicSubnet2DefaultRoute052936F6",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1573:19)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1247:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1246:46)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPublicSubnet2EIP8CCBA239",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1760:21)",
+              "NatGatewayProvider.configureNat (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:173:27)",
+              "Vpc.createNatGateways (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1331:14)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1253:14)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPublicSubnet2NATGateway91BFBEC9",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1758:17)",
+              "NatGatewayProvider.configureNat (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:173:27)",
+              "Vpc.createNatGateways (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1331:14)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1253:14)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPrivateSubnet1Subnet5057CF7E",
+            "trace": [
+              "new Subnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1533:20)",
+              "new PrivateSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1786:5)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:28)",
+              "Vpc.createSubnets (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1356:12)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1228:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPrivateSubnet1RouteTable8819E6E2",
+            "trace": [
+              "new Subnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1551:19)",
+              "new PrivateSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1786:5)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:28)",
+              "Vpc.createSubnets (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1356:12)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1228:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPrivateSubnet1RouteTableAssociation56D38C7E",
+            "trace": [
+              "new Subnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1557:5)",
+              "new PrivateSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1786:5)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:28)",
+              "Vpc.createSubnets (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1356:12)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1228:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPrivateSubnet1DefaultRouteA8CDE2FA",
+            "trace": [
+              "PrivateSubnet.addRoute (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1619:19)",
+              "NatGatewayProvider.configureSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:186:12)",
+              "NatGatewayProvider.configureNat (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:179:12)",
+              "Vpc.createNatGateways (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1331:14)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1253:14)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPrivateSubnet2Subnet0040C983",
+            "trace": [
+              "new Subnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1533:20)",
+              "new PrivateSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1786:5)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:28)",
+              "Vpc.createSubnets (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1356:12)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1228:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPrivateSubnet2RouteTableCEDCEECE",
+            "trace": [
+              "new Subnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1551:19)",
+              "new PrivateSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1786:5)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:28)",
+              "Vpc.createSubnets (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1356:12)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1228:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPrivateSubnet2RouteTableAssociation86A610DA",
+            "trace": [
+              "new Subnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1557:5)",
+              "new PrivateSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1786:5)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:28)",
+              "Vpc.createSubnets (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1356:12)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1228:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcPrivateSubnet2DefaultRoute9CE96294",
+            "trace": [
+              "PrivateSubnet.addRoute (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1619:19)",
+              "NatGatewayProvider.configureSubnet (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:186:12)",
+              "NatGatewayProvider.configureNat (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:179:12)",
+              "Vpc.createNatGateways (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1331:14)",
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1253:14)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcIGW5C4A4F63",
+            "trace": [
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1235:19)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyVpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcVPCGW488ACE0D",
+            "trace": [
+              "new Vpc (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1241:19)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:27:17)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyCluster4C1BA579",
+            "trace": [
+              "new Cluster (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:137:21)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:32:21)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/iiifUser/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "iiifUser12FF31B8",
+            "trace": [
+              "new User (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\user.ts:251:18)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:37:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/iiifUser/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "iiifUserDefaultPolicy0F9000F2",
+            "trace": [
+              "new Policy (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "User.addToPrincipalPolicy (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\user.ts:306:28)",
+              "Function.addToPrincipal (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:168:61)",
+              "Function.addToPrincipalOrResource (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:119:26)",
+              "Bucket.grant (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.ts:726:27)",
+              "Bucket.grantRead (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.ts:585:17)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:50:23)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/iiifUserAccessKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "iiifUserAccessKey",
+            "trace": [
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:40:31)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/imageSourceBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "imageSourceBucket74199BD4",
+            "trace": [
+              "new Bucket (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.ts:1326:22)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:45:31)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/imageSourceBucket/Notifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "imageSourceBucketNotifications7CB33940",
+            "trace": [
+              "BucketNotifications.createResourceOnce (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.ts:109:23)",
+              "BucketNotifications.addNotification (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.ts:56:27)",
+              "Bucket.addEventNotification (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.ts:1449:24)",
+              "S3EventSource.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\s3.ts:31:19)",
+              "Function.addEventSource (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:344:12)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:112:29)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/imageSourceBucket/AllowBucketNotificationsToLargeImagesCdkStackiiifImgPreprocessF61DF809": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "imageSourceBucketAllowBucketNotificationsToLargeImagesCdkStackiiifImgPreprocessF61DF809694C08EA",
+            "trace": [
+              "Function.addPermission (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:245:5)",
+              "LambdaDestination.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3-notifications\\lib\\lambda.ts:22:15)",
+              "BucketNotifications.addNotification (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.ts:60:32)",
+              "Bucket.addEventNotification (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.ts:1449:24)",
+              "S3EventSource.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\s3.ts:31:19)",
+              "Function.addEventSource (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:344:12)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:112:29)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/imageCacheBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "imageCacheBucket21A3B9FE",
+            "trace": [
+              "new Bucket (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.ts:1326:22)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:53:30)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceLBDE830E97",
+            "trace": [
+              "new BaseLoadBalancer (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-load-balancer.ts:208:22)",
+              "new ApplicationLoadBalancer (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.ts:85:5)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:381:9)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:118:5)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceLBSecurityGroup6FBF16F1",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:402:26)",
+              "new ApplicationLoadBalancer (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.ts:92:52)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:381:9)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:118:5)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/LB/SecurityGroup/to LargeImagesCdkStackMyFargateServiceSecurityGroup09B7D729:8182": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceLBSecurityGrouptoLargeImagesCdkStackMyFargateServiceSecurityGroup09B7D729818237D7E2B2",
+            "trace": [
+              "SecurityGroup.addEgressRule (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:106:7)",
+              "SecurityGroup.addEgressRule (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:449:13)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:131:23",
+              "ReactiveList.forEachAndForever (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:267:7)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:130:45",
+              "ReactiveList.forEachAndForever (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:267:7)",
+              "Connections.allowTo (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:129:26)",
+              "Connections.allowFrom (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:161:25)",
+              "ApplicationListener.registerConnectable (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.ts:457:29)",
+              "ApplicationTargetGroup.registerConnectable (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.ts:148:16)",
+              "Object.attachToApplicationTargetGroup (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:453:21)",
+              "FargateService.attachToApplicationTargetGroup (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:415:43)",
+              "ApplicationTargetGroup.addTarget (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.ts:122:29)",
+              "ApplicationLoadBalancedFargateService.addServiceAsTarget (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:485:22)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:173:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceLBPublicListener61A1042F",
+            "trace": [
+              "new BaseListener (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-listener.ts:109:22)",
+              "new ApplicationListener (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.ts:191:5)",
+              "ApplicationLoadBalancer.addListener (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.ts:107:12)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:397:34)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:118:5)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceLBPublicListenerECSGroup4A3EDF05",
+            "trace": [
+              "new TargetGroupBase (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-target-group.ts:241:21)",
+              "new ApplicationTargetGroup (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.ts:95:5)",
+              "ApplicationListener.addTargets (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.ts:359:19)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:402:38)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:118:5)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceLoadBalancerDNS704F6391",
+            "trace": [
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:467:5)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:118:5)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceServiceURL4CF8398A",
+            "trace": [
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:468:5)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:118:5)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/TaskDef/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceTaskDefTaskRole62C7D397",
+            "trace": [
+              "new Role (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:327:18)",
+              "new TaskDefinition (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:305:39)",
+              "new FargateTaskDefinition (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-task-definition.ts:87:5)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:128:29)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceTaskDef5DA17B39",
+            "trace": [
+              "new TaskDefinition (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:309:21)",
+              "new FargateTaskDefinition (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-task-definition.ts:87:5)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:128:29)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/TaskDef/web/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceTaskDefwebLogGroup4A6C44E8",
+            "trace": [
+              "new LogGroup (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-group.ts:373:22)",
+              "AwsLogDriver.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\log-drivers\\aws-log-driver.ts:95:44)",
+              "new ContainerDefinition (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.ts:410:44)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:424:12)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:143:45)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/TaskDef/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceTaskDefExecutionRoleD6305504",
+            "trace": [
+              "new Role (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:327:18)",
+              "FargateTaskDefinition.obtainExecutionRole (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:485:29)",
+              "AwsLogDriver.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\log-drivers\\aws-log-driver.ts:99:65)",
+              "new ContainerDefinition (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.ts:410:44)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:424:12)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:143:45)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/TaskDef/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceTaskDefExecutionRoleDefaultPolicyEC22B20F",
+            "trace": [
+              "new Policy (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:368:28)",
+              "Function.addToPrincipal (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:168:61)",
+              "LogGroup.grant (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-group.ts:167:22)",
+              "LogGroup.grantWrite (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-group.ts:160:17)",
+              "AwsLogDriver.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\log-drivers\\aws-log-driver.ts:99:19)",
+              "new ContainerDefinition (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.ts:410:44)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:424:12)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:143:45)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceF490C034",
+            "trace": [
+              "new BaseService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:360:21)",
+              "new FargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-service.ts:153:5)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:156:20)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceSecurityGroup7016792A",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:402:26)",
+              "FargateService.configureAwsVpcNetworkingWithSecurityGroups (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:647:25)",
+              "new FargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-service.ts:172:10)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:156:20)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/MyFargateService/Service/SecurityGroup/from LargeImagesCdkStackMyFargateServiceLBSecurityGroup1290001C:8182": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceSecurityGroupfromLargeImagesCdkStackMyFargateServiceLBSecurityGroup1290001C818247FACDDE",
+            "trace": [
+              "SecurityGroup.addIngressRule (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:88:7)",
+              "SecurityGroup.addIngressRule (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:419:13)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:154:23",
+              "ReactiveList.forEachAndForever (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:267:7)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:153:45",
+              "ReactiveList.forEachAndForever (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:267:7)",
+              "Connections.allowFrom (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:152:26)",
+              "ApplicationListener.registerConnectable (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.ts:457:29)",
+              "ApplicationTargetGroup.registerConnectable (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.ts:148:16)",
+              "Object.attachToApplicationTargetGroup (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:453:21)",
+              "FargateService.attachToApplicationTargetGroup (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:415:43)",
+              "ApplicationTargetGroup.addTarget (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.ts:122:29)",
+              "ApplicationLoadBalancedFargateService.addServiceAsTarget (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:485:22)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:173:10)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:62:24)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/iiifImgPreprocessQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "iiifImgPreprocessQueue514CD772",
+            "trace": [
+              "new Queue (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-sqs\\lib\\queue.ts:265:19)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:85:36)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/iiifImgPreprocess/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "iiifImgPreprocessServiceRoleFF6C4ED0",
+            "trace": [
+              "new Role (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:327:18)",
+              "new Function (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:552:31)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:90:37)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/iiifImgPreprocess/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "iiifImgPreprocessServiceRoleDefaultPolicy4CCF9BEA",
+            "trace": [
+              "new Policy (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:368:28)",
+              "Function.addToPrincipal (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:168:61)",
+              "Function.addToPrincipalOrResource (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:119:26)",
+              "Queue.grant (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-sqs\\lib\\queue-base.ts:241:22)",
+              "Queue.grantSendMessages (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-sqs\\lib\\queue-base.ts:203:22)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:115:28)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/iiifImgPreprocess/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "iiifImgPreprocess5F90758A",
+            "trace": [
+              "new Function (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:614:35)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:90:37)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/AssetParameters/bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adS3Bucket400830AD",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "LargeImagesCdkStack.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:90:37)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/AssetParameters/bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adS3VersionKey5461B2A0",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "LargeImagesCdkStack.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:90:37)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/AssetParameters/bf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69ad/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbf69e4f50733e20df8fb50f92aa6e72c0016f505eedd9e0b260b3e94e2ac69adArtifactHash847A8C77",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "LargeImagesCdkStack.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:90:37)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/AssetParameters/dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6S3Bucket8E0931D4",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "LargeImagesCdkStack.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:101:34)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/AssetParameters/dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6S3VersionKey8F7A456B",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "LargeImagesCdkStack.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:101:34)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/AssetParameters/dea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersdea0af994c7c0c8ee399c87757761472adf19b9f9de950bce2cec48756bca9e6ArtifactHash9E4BF738",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "LargeImagesCdkStack.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:101:34)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/iiifImgProcess/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "iiifImgProcessServiceRole748F2EEF",
+            "trace": [
+              "new Role (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:327:18)",
+              "new Function (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:552:31)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:101:34)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/iiifImgProcess/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "iiifImgProcessServiceRoleDefaultPolicy64B1B449",
+            "trace": [
+              "new Policy (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:368:28)",
+              "Function.addToPrincipal (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:168:61)",
+              "Function.addToPrincipalOrResource (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:119:26)",
+              "Queue.grant (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-sqs\\lib\\queue-base.ts:241:22)",
+              "Queue.grantConsumeMessages (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-sqs\\lib\\queue-base.ts:177:22)",
+              "SqsEventSource.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\sqs.ts:45:16)",
+              "Function.addEventSource (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:344:12)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:116:26)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/iiifImgProcess/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "iiifImgProcessA8A9C76E",
+            "trace": [
+              "new Function (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:614:35)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:101:34)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/iiifImgProcess/SqsEventSource:LargeImagesCdkStackiiifImgPreprocessQueue3648EBF9/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "iiifImgProcessSqsEventSourceLargeImagesCdkStackiiifImgPreprocessQueue3648EBF94461B473",
+            "trace": [
+              "new EventSourceMapping (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\event-source-mapping.ts:186:35)",
+              "Function.addEventSourceMapping (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:296:12)",
+              "SqsEventSource.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\sqs.ts:38:39)",
+              "Function.addEventSource (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:344:12)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:116:26)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC",
+            "trace": [
+              "new Role (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:327:18)",
+              "new NotificationsResourceHandler (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource-handler.ts:54:18)",
+              "Function.singleton (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource-handler.ts:39:16)",
+              "BucketNotifications.createResourceOnce (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.ts:107:55)",
+              "BucketNotifications.addNotification (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.ts:56:27)",
+              "Bucket.addEventNotification (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.ts:1449:24)",
+              "S3EventSource.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\s3.ts:31:19)",
+              "Function.addEventSource (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:344:12)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:112:29)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36",
+            "trace": [
+              "new Policy (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:368:28)",
+              "Role.addToPolicy (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:376:17)",
+              "new NotificationsResourceHandler (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource-handler.ts:62:10)",
+              "Function.singleton (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource-handler.ts:39:16)",
+              "BucketNotifications.createResourceOnce (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.ts:107:55)",
+              "BucketNotifications.addNotification (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.ts:56:27)",
+              "Bucket.addEventNotification (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.ts:1449:24)",
+              "S3EventSource.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\s3.ts:31:19)",
+              "Function.addEventSource (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:344:12)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:112:29)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691",
+            "trace": [
+              "new NotificationsResourceHandler (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource-handler.ts:78:22)",
+              "Function.singleton (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource-handler.ts:39:16)",
+              "BucketNotifications.createResourceOnce (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.ts:107:55)",
+              "BucketNotifications.addNotification (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.ts:56:27)",
+              "Bucket.addEventNotification (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.ts:1449:24)",
+              "S3EventSource.bind (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\s3.ts:31:19)",
+              "Function.addEventSource (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:344:12)",
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:112:29)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/Region": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Region",
+            "trace": [
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:120:5)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/IIIF Username": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IIIFUsername",
+            "trace": [
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:121:5)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/Image Source Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ImageSourceBucket",
+            "trace": [
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:122:5)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/ELB URL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ELBURL",
+            "trace": [
+              "new LargeImagesCdkStack (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\lib\\large_images_cdk-stack.ts:123:5)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\bin\\large_images_cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.ts:51:24)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:140:5",
+              "visit (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:200:5)",
+              "visit (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:196:5)",
+              "injectMetadataResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:131:3)",
+              "Object.synthesize (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:18:3)",
+              "App.synth (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stage.ts:188:23)",
+              "process.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:486:12)",
+              "process.emit (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\source-map-support\\source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/LargeImagesCdkStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.ts:60:27)",
+              "C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:140:5",
+              "visit (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:200:5)",
+              "visit (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:196:5)",
+              "injectMetadataResources (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:131:3)",
+              "Object.synthesize (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:18:3)",
+              "App.synth (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stage.ts:188:23)",
+              "process.<anonymous> (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\@aws-cdk\\core\\lib\\app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:486:12)",
+              "process.emit (C:\\Users\\simbel\\Documents\\dev\\largeImagesIIIF\\cdk\\node_modules\\source-map-support\\source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
