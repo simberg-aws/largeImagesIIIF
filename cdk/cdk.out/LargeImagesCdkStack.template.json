@@ -1524,6 +1524,7 @@
           }
         },
         "Handler": "iiifImgProcessor.handler",
+        "ReservedConcurrentExecutions": 2,
         "Runtime": "nodejs12.x",
         "Tags": [
           {
@@ -1549,7 +1550,7 @@
         "FunctionName": {
           "Ref": "iiifImgProcessA8A9C76E"
         },
-        "BatchSize": 4,
+        "BatchSize": 5,
         "EventSourceArn": {
           "Fn::GetAtt": [
             "iiifImgPreprocessQueue514CD772",

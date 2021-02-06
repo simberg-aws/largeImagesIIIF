@@ -14,12 +14,14 @@ export class LargeImagesCdkStack extends cdk.Stack {
     super(scope, id, props);
 
     //Config
-    const NUM_AZS = 3;
+    const NUM_AZS = 2;
     const NUM_OF_TASKS = 3;
     const CPU_UNITS_CONTAINER = 2048;
     const MEMORY_UNITS_CONTAINER = 4096;
     const IIIF_PORT = 8182;
     const LAMBDA_TIMEOUT = 90; //seconds
+    const LAMBDA_PROCESSOR_CONCURRENT = 2; //Number of concurrent lamba processing images
+    const SQS_EVENT_BATCH_SIZE = 5; //number max of messages rendenred by the LAMBDA_PROCESSOR via BATCH
     
     Tags.of(this).add("billing-group", "iiif");
     const stringConcat = new StringConcat;
@@ -103,6 +105,7 @@ export class LargeImagesCdkStack extends cdk.Stack {
       code: lambda.Code.fromAsset('lambda/pos'),  // code loaded from "lambda" directory
       handler: 'iiifImgProcessor.handler',
       timeout: cdk.Duration.seconds(LAMBDA_TIMEOUT),
+      reservedConcurrentExecutions: LAMBDA_PROCESSOR_CONCURRENT,
       environment: {
         'QUEUE_NAME': iiifImgPreprocessQueue.queueUrl,
         'IIIF_ENDPOINT': "http://" + ecsService.loadBalancer.loadBalancerDnsName + ":" + IIIF_PORT
@@ -114,7 +117,7 @@ export class LargeImagesCdkStack extends cdk.Stack {
     }));
     iiifImgPreprocessQueue.grantSendMessages(iiifImgPreprocessLambda);
     iiifImgProcessLambda.addEventSource(new SqsEventSource(iiifImgPreprocessQueue, {
-      batchSize: 4
+      batchSize: SQS_EVENT_BATCH_SIZE
     }));
 
     new CfnOutput(this, 'Region', { value: this.region});
