@@ -15,7 +15,9 @@ export class LargeImagesCdkStack extends cdk.Stack {
 
     //Config
     const NUM_AZS = 2;
-    const NUM_OF_TASKS = 3;
+    const DESIRED_CAPACITY_TASKS = 2;
+    const MIN_CAPACITY_TASKS = 2;
+    const MAX_CAPACITY_TASKS = 10;
     const CPU_UNITS_CONTAINER = 2048;
     const MEMORY_UNITS_CONTAINER = 4096;
     const IIIF_PORT = 8182;
@@ -64,7 +66,7 @@ export class LargeImagesCdkStack extends cdk.Stack {
     const ecsService = new ecs_patterns.ApplicationLoadBalancedFargateService(this, "MyFargateService", {
       cluster: cluster,
       cpu: CPU_UNITS_CONTAINER,
-      desiredCount: NUM_OF_TASKS,
+      desiredCount: DESIRED_CAPACITY_TASKS,
       taskImageOptions: { 
         image: ecs.ContainerImage.fromRegistry("public.ecr.aws/f4r5b0m7/iiif-aws-solution-poc"), 
         containerPort:IIIF_PORT,
@@ -83,6 +85,15 @@ export class LargeImagesCdkStack extends cdk.Stack {
       publicLoadBalancer: true,
       listenerPort:IIIF_PORT
     })
+
+    const scalableTarget = ecsService.service.autoScaleTaskCount({
+      minCapacity: MIN_CAPACITY_TASKS,
+      maxCapacity: MAX_CAPACITY_TASKS,
+    });
+
+    scalableTarget.scaleOnCpuUtilization('CpuScaling', {
+      targetUtilizationPercent: 70,
+    });
 
     const iiifImgPreprocessQueue = new sqs.Queue(this, 'iiifImgPreprocessQueue', {
       visibilityTimeout: cdk.Duration.seconds(900)
