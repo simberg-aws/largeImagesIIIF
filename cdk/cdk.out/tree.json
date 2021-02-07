@@ -1272,7 +1272,7 @@
                           "maximumPercent": 200,
                           "minimumHealthyPercent": 50
                         },
-                        "desiredCount": 3,
+                        "desiredCount": 2,
                         "enableEcsManagedTags": false,
                         "healthCheckGracePeriodSeconds": 60,
                         "launchType": "FARGATE",
@@ -1393,7 +1393,7 @@
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::ApplicationAutoScaling::ScalableTarget",
                               "aws:cdk:cloudformation:props": {
-                                "maxCapacity": 20,
+                                "maxCapacity": 10,
                                 "minCapacity": 2,
                                 "resourceId": {
                                   "Fn::Join": [
@@ -1460,6 +1460,41 @@
                               }
                             }
                           }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "myCachePolicy": {
+            "id": "myCachePolicy",
+            "path": "LargeImagesCdkStack/myCachePolicy",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "LargeImagesCdkStack/myCachePolicy/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CloudFront::CachePolicy",
+                  "aws:cdk:cloudformation:props": {
+                    "cachePolicyConfig": {
+                      "name": "iiiFPolicy",
+                      "comment": "Policy for iiifImages",
+                      "minTtl": 60,
+                      "maxTtl": 600,
+                      "defaultTtl": 300,
+                      "parametersInCacheKeyAndForwardedToOrigin": {
+                        "cookiesConfig": {
+                          "cookieBehavior": "none"
+                        },
+                        "headersConfig": {
+                          "headerBehavior": "none"
+                        },
+                        "enableAcceptEncodingGzip": true,
+                        "enableAcceptEncodingBrotli": true,
+                        "queryStringsConfig": {
+                          "queryStringBehavior": "none"
                         }
                       }
                     }

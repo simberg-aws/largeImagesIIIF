@@ -6,6 +6,8 @@ import * as s3 from '@aws-cdk/aws-s3';
 import * as iam from '@aws-cdk/aws-iam';
 import * as lambda from '@aws-cdk/aws-lambda';
 import * as sqs from '@aws-cdk/aws-sqs';
+import * as cloudfront from '@aws-cdk/aws-cloudfront';
+import * as origins from '@aws-cdk/aws-cloudfront-origins';
 import { Aws, CfnOutput, Fn, StringConcat, Tag, Tags } from '@aws-cdk/core';
 import { S3EventSource, SqsEventSource } from '@aws-cdk/aws-lambda-event-sources'
 
@@ -95,6 +97,29 @@ export class LargeImagesCdkStack extends cdk.Stack {
       targetUtilizationPercent: 70,
     });
 
+    //CloudFront
+    // Creating a custom cache policy 
+    const iiifCachePolicy = new cloudfront.CachePolicy(this, 'myCachePolicy', {
+      cachePolicyName: 'iiiFPolicy',
+      comment: 'Policy for iiifImages',
+      defaultTtl: cdk.Duration.minutes(5),
+      minTtl: cdk.Duration.minutes(1),
+      maxTtl: cdk.Duration.minutes(10),
+      //cookieBehavior: cloudfront.CacheCookieBehavior.all(),
+      //headerBehavior: cloudfront.CacheHeaderBehavior.allowList('X-CustomHeader'),
+      //queryStringBehavior: cloudfront.CacheQueryStringBehavior.denyList('username'),
+      enableAcceptEncodingGzip: true,
+      enableAcceptEncodingBrotli: true,
+    });
+
+    // const cloudFrontDistribution = new cloudfront.Distribution(this, 'largeImageDist', {
+    //     defaultBehavior: { origin: new origins.LoadBalancerV2Origin(ecsService.loadBalancer), 
+    //     cachePolicy: iiifCachePolicy
+    //   },
+    // });
+
+//Image Tile Generator
+    //Queue
     const iiifImgPreprocessQueue = new sqs.Queue(this, 'iiifImgPreprocessQueue', {
       visibilityTimeout: cdk.Duration.seconds(900)
     });
@@ -135,6 +160,8 @@ export class LargeImagesCdkStack extends cdk.Stack {
     new CfnOutput(this, 'IIIF Username', { value: iiifS3User.userName});
     new CfnOutput(this, 'Image Source Bucket', { value: imageSourceBucket.bucketName});
     new CfnOutput(this, 'ELB URL', { value: stringConcat.join("http://" + ecsService.loadBalancer.loadBalancerDnsName, ":" + IIIF_PORT )});
+    //new CfnOutput(this, 'Endpoint', { value: cloudFrontDistribution.distributionDomainName});
+    cloudfront
   }
 }
 
