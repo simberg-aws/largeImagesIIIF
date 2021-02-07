@@ -1,17 +1,17 @@
 # largeImagesIIIF
 
-#Installing
+# Installing
 
 Installing AWS CDK [tutorial](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html).
 
-#Deployment
+# Deployment
 
 - Get the project from github
 - Go to cdk directory
 - Enter: *>cdk deploy*
 - Save the **LargeImagesCdkStack.ELBURL** in the Output section, that is the URL to access your server
 
-#Adding new images
+# Adding new images
 - Go to S3 console (web)
 - Find the bucket *largeimagescdkstack-imagesourcebucket<ID>*
 - Upload the image
@@ -19,7 +19,7 @@ Installing AWS CDK [tutorial](https://docs.aws.amazon.com/cdk/latest/guide/getti
 - The new tiles will be saved inside of *largeimagescdkstack-imagecachebucket<ID>* bucket
 - The tiles can take a few minutes to be processed, the system has a protection to not overload the production servers
 
-#Visualizing the images
+# Visualizing the images
 - Go to *clients* directory
 - Edit the file *visualize_with_openseadragon.html"
 -    *"<REPLACE_SERVER_IP:PORT>/iiif/2/<IMAGE_NAME>/info.json"*
@@ -27,7 +27,7 @@ Installing AWS CDK [tutorial](https://docs.aws.amazon.com/cdk/latest/guide/getti
 -    Replace **<IMAGE_NAME>** with the image name, including the extention
 -    Example: *http://Large-MyFar-21312312321323.us-east-1.elb.amazonaws.com:8182/iiif/2/im1.tif/info.json*
 
-#TODO List
+# TODO List
 - Add Cloudfront
 - Review network
 - Move to HTTPS and test with port 443
