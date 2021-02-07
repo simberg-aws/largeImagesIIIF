@@ -2,11 +2,11 @@
 
 # Installing
 
-Installing AWS CDK [tutorial](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html).
+- Installing AWS CDK [tutorial](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html).
+- Get the project from github
 
 # Deployment
 
-- Get the project from github
 - Go to cdk directory
 - Enter: *>cdk deploy*
 - Save the **LargeImagesCdkStack.ELBURL** in the Output section, that is the URL to access your server
